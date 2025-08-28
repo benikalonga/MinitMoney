@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": "9xtdgyn3yjSsjHcg1Ag3K",
+      "phone": "0739605775",
+      "firstName": "Beni",
+      "lastName": "K",
+      "pinHash": "$2b$08$6QCReJBhKErXXllS6Iu0AuR9RsAQGTWAwEy6TmPGp4qAgweA9DQy6"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "PQQ6DggClteu9EXIj9oOW",
+      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "recipient": {
+        "id": "wFJ_pyScZvv93hd4X2Ino",
+        "name": "Yaya Kalonga",
+        "method": "Capitec"
+      },
+      "amount": 10,
+      "method": "Absa",
+      "currency": "ZAR",
+      "status": "PENDING",
+      "createdAt": "2025-08-27T09:49:25.022Z"
+    },
+    {
+      "id": "J_XAyF22vMOCnSa59B_eS",
+      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "recipient": {
+        "id": "0pVix7iJEnrIcQ1UFSP-S",
+        "name": "Jonathan Kalonga",
+        "method": "Mpesa"
+      },
+      "amount": 5000,
+      "method": "Mpesa",
+      "currency": "ZAR",
+      "status": "failed",
+      "createdAt": "2025-08-27T09:54:26.959Z"
+    },
+    {
+      "id": "QIcsPzIGuHdaYd0ZrPK5A",
+      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "recipient": {
+        "id": "54LOvbnpc3zn3lfatf_Q6",
+        "name": "Daniel Kalonga",
+        "method": "Nedbank"
+      },
+      "amount": 10,
+      "method": "Rawbank",
+      "currency": "ZAR",
+      "status": "SUCCESS",
+      "createdAt": "2025-08-27T09:55:37.969Z"
+    },
+    {
+      "id": "e4fkM-NXioGOQhoT5bDbB",
+      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "recipient": {
+        "id": "qjLk89bWPeiXQiDsNAaT_",
+        "name": "Yaya Kalonga",
+        "method": "Capitec"
+      },
+      "amount": 750,
+      "method": "EWallet",
+      "currency": "ZAR",
+      "status": "SUCCESS",
+      "createdAt": "2025-08-27T11:37:46.402Z"
+    }
+  ]
+}

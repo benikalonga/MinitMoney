@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "minitmoney-mobile",
+    "slug": "minitmoney-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "scheme": "minitmoney",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-asset",
+        {
+          "assets": [
+            "./assets/images/logo.png"
+          ]
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.benikalonga.minitmoneymobile"
+    }
+  }
+}
