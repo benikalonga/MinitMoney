@@ -78,14 +78,26 @@ if having dependencies version conflict, please run **npm install --legacy-peer-
 Please see the result in `./results` directory
 Screenshots for the entire system
 
-# MOBILE
+# RESULT
 
-**1**
-    <img src="./results/mobile/1.PNG" width="200">
-**2**
-    <img src="./results/mobile/2.PNG" width="200">
+## MOBILE
+
+**1** <img src="./results/mobile/1.PNG" width="200">
+**2** <img src="./results/mobile/2.PNG" width="200">
 **3** <img src="./results/mobile/3.PNG" width="200">
 **4** <img src="./results/mobile/4.PNG" width="200">
 **5** <img src="./results/mobile/5.PNG" width="200">
 **6** <img src="./results/mobile/6.PNG" width="200">
 **7** <img src="./results/mobile/7.PNG" width="200">
+
+## WEB
+
+**1** <img src="./results/web/web-login.png" width="400">
+**2** <img src="./results/web/web-dashboard.png" width="400">
+**3** <img src="./results/web/web-dashboard-dark.png.png" width="400">
+**4** <img src="./results/web/web-dashboard-detail.png.png" width="400">
+**5** <img src="./results/web/web-dashboard-detail-dark.png" width="400">
+
+## SERVER
+
+<img src="./results/server/Server.png" width="600">
