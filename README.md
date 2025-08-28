@@ -2,9 +2,16 @@
 
 https://github.com/minitmoney/fullstack-test
 Building both a mobile app and a web dashboard using the designs provided.
+
 ### Quick Demo
+
 https://github.com/user-attachments/assets/80521258-aba6-4202-851e-f03c6f84a0d7
 
+Clone this project 
+```bash
+git clone https://github.com/benikalonga/MinitMoney.git
+```
+Get started 
 ### Mobile (Expo)
 
 Expo React Native + TypeScript + Apollo + Axios + SecureStore
