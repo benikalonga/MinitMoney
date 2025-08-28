@@ -92,5 +92,3 @@ Screenshots for the entire system
 ![Send History](results/mobile/5.png)
 **6**
 ![Transaction Detail](results/mobile/6.png)
-**7**
-![Network Checking](results/mobile/7.png)
