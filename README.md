@@ -80,10 +80,10 @@ Screenshots for the entire system
 
 ## MOBILE
 
-![Login](results/mobile/1.png?raw=true "Login")
-![Register](results/mobile/2.png?raw=true "Register")
-![Home](results/mobile/3.png?raw=true "Home")
-![Send Money](results/mobile/4.png?raw=true "Send Money")
-![Send History](results/mobile/5.png?raw=true "Send History")
-![Transaction Detail](results/mobile/6.png?raw=true "Transaction Detail")
-![Network Checking](results/mobile/7.png?raw=true "Network Checking")
+![Login](results/mobile/1.png?raw=true)
+![Register](results/mobile/2.png?raw=true)
+![Home](results/mobile/3.png?raw=true)
+![Send Money](results/mobile/4.png?raw=true)
+![Send History](results/mobile/5.png?raw=true)
+![Transaction Detail](results/mobile/6.png?raw=true)
+![Network Checking](results/mobile/7.png?raw=true)
