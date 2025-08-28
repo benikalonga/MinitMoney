@@ -47,8 +47,31 @@ npm install
 npm run dev
 ```
 
+## Bonus
+
+## Mobile
+
+- Added custom fonts on the mobile App
+- Added A Network State Listener for connectivity
+- Added a Splashscreen
+
+## WEB
+
+- Added A login Page for the Admin Dashboard,
+- Support Light/Dark mode
+
+## SERVER
+
+- Using a json file as db
+- using a rest api to get the rate
+
+## Suggestions
+
+- Add Subscription to listen to any transaction event on the Dashboard
+- Connect to a DB
+
 Open http://localhost:5000.
-The app will take you to First visit `/login`, use seeded credentials **Register a user on the device to get credentials**.
+The app will take you to Login page `/login`, use seeded credentials **Register a user on the device to get credentials**.
 
 if having dependencies version conflict, please run **npm install --legacy-peer-deps**
 
