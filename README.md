@@ -81,9 +81,14 @@ Screenshots for the entire system
 # MOBILE
 
 **1**
-![Login](results/mobile/1.PNG)
+
+<p>
+    <img src="./results/mobile/1.PNG" width="200">
+</p>
 **2**
-![Register](results/mobile/2.PNG)
+<p>
+    <img src="./results/mobile/2.PNG" width="200">
+</p>
 **3**
 ![Home](results/mobile/3.PNG)
 **4**
