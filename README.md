@@ -1,4 +1,6 @@
 # Fullstack React Native Assessment
+https://github.com/minitmoney/fullstack-test
+Building both a mobile app and a web dashboard using the designs provided.
 
 ### Mobile (Expo)
 
@@ -73,3 +75,5 @@ Install and the mobile App using Expo Go, .
 if having dependencies version conflict, please run **npm install --legacy-peer-deps**
 
 Please see the result in `./results` directory
+Screenshots for the entire system 
+
