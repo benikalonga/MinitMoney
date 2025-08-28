@@ -82,7 +82,8 @@ Screenshots for the entire system
 
 ## MOBILE
 
-![Demo](results/mobile/My%20Video.mp4)
+https://github.com/user-attachments/assets/80521258-aba6-4202-851e-f03c6f84a0d7
+
 **1** <img src="./results/mobile/1.PNG" width="200">
 **2** <img src="./results/mobile/2.PNG" width="200">
 **3** <img src="./results/mobile/3.PNG" width="200">
@@ -93,7 +94,7 @@ Screenshots for the entire system
 
 ## WEB
 
-**1** <img src="./results/web/web-login.png" width="400">
+**1** <img src="./results/web/web-login.png" width="800">
 **2** <img src="./results/web/web-dashboard.png" width="400">
 **3** <img src="./results/web/web-dashboard-dark.png" width="400">
 **4** <img src="./results/web/web-dashboard-detail.png" width="400">
