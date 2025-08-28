@@ -2,6 +2,8 @@
 
 https://github.com/minitmoney/fullstack-test
 Building both a mobile app and a web dashboard using the designs provided.
+### Quick Demo
+https://github.com/user-attachments/assets/80521258-aba6-4202-851e-f03c6f84a0d7
 
 ### Mobile (Expo)
 
@@ -81,8 +83,6 @@ Screenshots for the entire system
 # RESULT
 
 ## MOBILE
-
-https://github.com/user-attachments/assets/80521258-aba6-4202-851e-f03c6f84a0d7
 
 **1** <img src="./results/mobile/1.PNG" width="200">
 **2** <img src="./results/mobile/2.PNG" width="200">
