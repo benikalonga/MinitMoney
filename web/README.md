@@ -8,8 +8,6 @@ npm install
 npm run dev
 ```
 
-Create `.env` (optional):
-
 ```
-VITE_API_URL=http://localhost:4000/graphql
+Note the server APi = http://localhost:4000/graphql
 ```

@@ -1,69 +1,41 @@
 {
   "users": [
     {
-      "id": "9xtdgyn3yjSsjHcg1Ag3K",
+      "id": "Nj0vphwVrGRmMlhKblNT9",
       "phone": "0739605775",
       "firstName": "Beni",
-      "lastName": "K",
-      "pinHash": "$2b$08$6QCReJBhKErXXllS6Iu0AuR9RsAQGTWAwEy6TmPGp4qAgweA9DQy6"
+      "lastName": "Kalonga ",
+      "pinHash": "$2b$08$My9.5U4P94e45TH1p1cpb.cpT0EYLB7.ykhdhUdhdca..eTo/0ez6"
     }
   ],
   "transactions": [
     {
-      "id": "PQQ6DggClteu9EXIj9oOW",
-      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "id": "SDluFEXkISV6z4cj7AeHX",
+      "userId": "Nj0vphwVrGRmMlhKblNT9",
       "recipient": {
-        "id": "wFJ_pyScZvv93hd4X2Ino",
+        "id": "YeqVey8aDhXbSQObRehO2",
         "name": "Yaya Kalonga",
         "method": "Capitec"
       },
-      "amount": 10,
-      "method": "Absa",
+      "amount": 270,
+      "method": "Capitec",
       "currency": "ZAR",
-      "status": "PENDING",
-      "createdAt": "2025-08-27T09:49:25.022Z"
+      "status": "SUCCESS",
+      "createdAt": "2025-08-28T01:21:57.358Z"
     },
     {
-      "id": "J_XAyF22vMOCnSa59B_eS",
-      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
+      "id": "2-UmDBE_VcyjsDxkjPog3",
+      "userId": "Nj0vphwVrGRmMlhKblNT9",
       "recipient": {
-        "id": "0pVix7iJEnrIcQ1UFSP-S",
-        "name": "Jonathan Kalonga",
-        "method": "Mpesa"
-      },
-      "amount": 5000,
-      "method": "Mpesa",
-      "currency": "ZAR",
-      "status": "failed",
-      "createdAt": "2025-08-27T09:54:26.959Z"
-    },
-    {
-      "id": "QIcsPzIGuHdaYd0ZrPK5A",
-      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
-      "recipient": {
-        "id": "54LOvbnpc3zn3lfatf_Q6",
+        "id": "2gCcIOK9DictwroYO8spm",
         "name": "Daniel Kalonga",
         "method": "Nedbank"
       },
-      "amount": 10,
-      "method": "Rawbank",
+      "amount": 5000,
+      "method": "African ",
       "currency": "ZAR",
       "status": "SUCCESS",
-      "createdAt": "2025-08-27T09:55:37.969Z"
-    },
-    {
-      "id": "e4fkM-NXioGOQhoT5bDbB",
-      "userId": "9xtdgyn3yjSsjHcg1Ag3K",
-      "recipient": {
-        "id": "qjLk89bWPeiXQiDsNAaT_",
-        "name": "Yaya Kalonga",
-        "method": "Capitec"
-      },
-      "amount": 750,
-      "method": "EWallet",
-      "currency": "ZAR",
-      "status": "SUCCESS",
-      "createdAt": "2025-08-27T11:37:46.402Z"
+      "createdAt": "2025-08-28T01:22:25.997Z"
     }
   ]
 }

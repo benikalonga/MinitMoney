@@ -1,34 +1,55 @@
-# Full Assessment (TypeScript) – Mobile + Web + Server
+# Fullstack React Native Assessment
+
+### Mobile (Expo)
 
 ```
-/server  - TypeScript Node + Apollo GraphQL + REST(/rates)
-/mobile  - Expo React Native + TypeScript + Apollo + Axios + SecureStore
-/web     - React + Vite + TypeScript + Chakra UI + Apollo + Router (with Login)
+- Expo React Native + TypeScript + Apollo + Axios + SecureStore
+```
+
+### Web (Vite)
+
+```
+- React + Vite + Chakra UI + Apollo + Router
+```
+
+### Server
+
+```
+- Node + Apollo GraphQL + REST
+
 ```
 
 ## 1) Start the server
+
 ```bash
 cd server
 npm install
-npm run seed   # optional demo data
-npm run dev    # or: npm run build && npm start
+npm run dev
 ```
 
 ## 2) Start the mobile app
+
 ```bash
 cd mobile
 npm install
 npm start
 ```
-Emulator/Simulator or Expo Go. For real device, set `API_BASE` in `lib/config.ts` to your machine IP.
+
+I am using the expo config to get the iP
+Emulator/Simulator or Expo Go. For real device,
+If need to be tested on real device, set `API_BASE` in `lib/config.ts` to your machine IP.
 
 ## 3) Start the web dashboard
+
 ```bash
 cd web
 npm install
 npm run dev
 ```
-Open http://localhost:5173. First visit `/login`, use seeded credentials **0712345678 / 1234**.
 
----
-This TypeScript version fulfills your "TS-supported + dashboard login" request.
+Open http://localhost:5000.
+The app will take you to First visit `/login`, use seeded credentials **Register a user on the device to get credentials**.
+
+if having dependencies version conflict, please run **npm install --legacy-peer-deps**
+
+Please see the result in `./results` directory
