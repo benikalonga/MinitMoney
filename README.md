@@ -2,32 +2,9 @@
 
 ### Mobile (Expo)
 
-```
-- Expo React Native + TypeScript + Apollo + Axios + SecureStore
-```
+Expo React Native + TypeScript + Apollo + Axios + SecureStore
 
-### Web (Vite)
-
-```
-- React + Vite + Chakra UI + Apollo + Router
-```
-
-### Server
-
-```
-- Node + Apollo GraphQL + REST
-
-```
-
-## 1) Start the server
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-## 2) Start the mobile app
+## Start the mobile app
 
 ```bash
 cd mobile
@@ -39,10 +16,26 @@ I am using the expo config to get the iP
 Emulator/Simulator or Expo Go. For real device,
 If need to be tested on real device, set `API_BASE` in `lib/config.ts` to your machine IP.
 
-## 3) Start the web dashboard
+### Web (Vite)
+
+React + Vite + Chakra UI + Apollo + Router
+
+## Start the web dashboard
 
 ```bash
 cd web
+npm install
+npm run dev
+```
+
+### Server
+
+Node + Apollo GraphQL + REST
+
+## Start the server
+
+```bash
+cd server
 npm install
 npm run dev
 ```
@@ -70,8 +63,12 @@ npm run dev
 - Add Subscription to listen to any transaction event on the Dashboard
 - Connect to a DB
 
+Open http://localhost:4000/graphql. for ApolloServer and test
+
 Open http://localhost:5000.
 The app will take you to Login page `/login`, use seeded credentials **Register a user on the device to get credentials**.
+
+Install and the mobile App using Expo Go, .
 
 if having dependencies version conflict, please run **npm install --legacy-peer-deps**
 
