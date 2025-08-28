@@ -94,10 +94,10 @@ Screenshots for the entire system
 
 **1** <img src="./results/web/web-login.png" width="400">
 **2** <img src="./results/web/web-dashboard.png" width="400">
-**3** <img src="./results/web/web-dashboard-dark.png.png" width="400">
-**4** <img src="./results/web/web-dashboard-detail.png.png" width="400">
+**3** <img src="./results/web/web-dashboard-dark.png" width="400">
+**4** <img src="./results/web/web-dashboard-detail.png" width="400">
 **5** <img src="./results/web/web-dashboard-detail-dark.png" width="400">
 
 ## SERVER
 
-<img src="./results/server/Server.png" width="600">
+<img src="./results/server/Server.png" >
