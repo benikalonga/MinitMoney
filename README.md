@@ -81,21 +81,11 @@ Screenshots for the entire system
 # MOBILE
 
 **1**
-
-<p>
     <img src="./results/mobile/1.PNG" width="200">
-</p>
 **2**
-<p>
     <img src="./results/mobile/2.PNG" width="200">
-</p>
-**3**
-![Home](results/mobile/3.PNG)
-**4**
-![Send Money](results/mobile/4.PNG)
-**5**
-![Send History](results/mobile/5.PNG)
-**6**
-![Transaction Detail](results/mobile/6.PNG)
-**7**
-![Network Checking](results/mobile/7.PNG)
+**3** <img src="./results/mobile/3.PNG" width="200">
+**4** <img src="./results/mobile/4.PNG" width="200">
+**5** <img src="./results/mobile/5.PNG" width="200">
+**6** <img src="./results/mobile/6.PNG" width="200">
+**7** <img src="./results/mobile/7.PNG" width="200">
