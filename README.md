@@ -1,4 +1,4 @@
-# Fullstack React Native Assessment - Beni KALONGA
+# Fullstack Assessment - Beni KALONGA
 
 https://github.com/minitmoney/fullstack-test
 Building both a mobile app and a web dashboard using the designs provided.
