@@ -81,14 +81,16 @@ Screenshots for the entire system
 # MOBILE
 
 **1**
-![Login](results/mobile/1.png)
+![Login](results/mobile/1.PNG)
 **2**
-![Register](results/mobile/2.png)
+![Register](results/mobile/2.PNG)
 **3**
-![Home](results/mobile/3.png)
+![Home](results/mobile/3.PNG)
 **4**
-![Send Money](results/mobile/4.png)
+![Send Money](results/mobile/4.PNG)
 **5**
-![Send History](results/mobile/5.png)
+![Send History](results/mobile/5.PNG)
 **6**
-![Transaction Detail](results/mobile/6.png)
+![Transaction Detail](results/mobile/6.PNG)
+**7**
+![Network Checking](results/mobile/7.PNG)
