@@ -17,14 +17,16 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<Login />} />
-            <Route
-              path="/"
-              element={
-                <Protected>
-                  <Dashboard />
-                </Protected>
-              }
-            />
+            <Route path="/" element={<AppLayout />}>
+              <Route
+                index
+                element={
+                  <Protected>
+                    <Dashboard />
+                  </Protected>
+                }
+              />
+            </Route>
           </Routes>
         </BrowserRouter>
       </ChakraProvider>

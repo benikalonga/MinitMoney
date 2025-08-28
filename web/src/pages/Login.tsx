@@ -81,10 +81,10 @@ export default function LoginPage() {
             objectFit="contain"
           />
           <Heading as="h1" size="lg" color="white" mb={2}>
-            Your App Name
+            Minit Money
           </Heading>
           <Text color="white" mb={10} maxW="50ch" opacity={0.8}>
-            Create a user on the mobile device and log in using the same
+            Register a user on the mobile device and log in using the same
             credentials.
           </Text>
         </Box>

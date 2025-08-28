@@ -1,11 +1,5 @@
 import { useQuery } from "@apollo/client";
 import {
-  MoonIcon,
-  SunIcon,
-  TriangleDownIcon,
-  TriangleUpIcon,
-} from "@chakra-ui/icons";
-import {
   Avatar,
   Badge,
   Box,
@@ -16,15 +10,11 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Flex,
   HStack,
-  Icon,
   IconButton,
-  Image,
   Input,
   InputGroup,
   InputLeftElement,
-  Spacer,
   Table,
   TableContainer,
   Tbody,
@@ -34,141 +24,42 @@ import {
   Thead,
   Tr,
   VStack,
-  useColorMode,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { FC, useState } from "react";
-import { BiExport, BiFolderOpen, BiImport } from "react-icons/bi";
-import { BsCardChecklist } from "react-icons/bs";
-import {
-  FiEdit2,
-  FiEye,
-  FiFileText,
-  FiGrid,
-  FiLogOut,
-  FiSearch,
-  FiTrash2,
-} from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
-import { Transaction, User } from "src/types/types";
+import { FC, useState } from "react";
+import { BiExport, BiImport } from "react-icons/bi";
+import { FiEdit2, FiEye, FiSearch, FiTrash2 } from "react-icons/fi";
 import { TRANSACTION, TRANSACTIONS } from "../apollo/operations";
-import images from "../constants/images";
+import { Transaction } from "../types";
+import StatusBadge from "../ui/common/StatusBadge";
+import Topbar from "../ui/common/Topbar";
 import { getStatusColor } from "../utils";
 
-const StatusBadge = ({ status }: { status: string }) => {
-  return (
-    <Badge
-      variant="subtle"
-      colorScheme={getStatusColor(status)}
-      px={3}
-      py={1}
-      borderRadius="lg"
-      fontWeight="medium"
-    >
-      {status}
-    </Badge>
-  );
-};
+const Dashboard = () => {
+  const { data, loading, error, refetch } = useQuery(TRANSACTIONS, {
+    fetchPolicy: "cache-and-network",
+  });
 
-const Sidebar = () => {
-  const border = useColorModeValue("gray.200", "gray.700");
-  const activeBg = useColorModeValue("white", "black");
-  const activeColor = useColorModeValue("blue.700", "blue.200");
-  const bg = useColorModeValue("gray.100", "gray.900");
+  const [search, setSearch] = useState("");
 
-  const navigate = useNavigate();
-  const user: User = JSON.parse(localStorage.getItem("user"));
-
-  const Item = ({
-    icon,
-    label,
-    active = false,
-    onClick,
-  }: {
-    icon: React.ElementType;
-    label: string;
-    active?: boolean;
-    onClick?: () => void;
-  }) => (
-    <HStack
-      px={3}
-      py={2.5}
-      borderRadius="md"
-      spacing={3}
-      bg={active ? activeBg : "transparent"}
-      color={active ? activeColor : undefined}
-      _hover={{
-        bg: active ? activeBg : useColorModeValue("gray.100", "gray.700"),
-      }}
-      cursor="pointer"
-      aria-current={active ? "page" : undefined}
-      onClick={onClick}
-    >
-      <Icon as={icon} />
-      <Text fontWeight={active ? "semibold" : "light"} fontSize={"sm"}>
-        {label}
-      </Text>
-    </HStack>
-  );
+  const transactions: Transaction[] = search
+    ? (data?.transactions || []).filter((t: Transaction) =>
+        (t.id + t.recipient.name + t.currency + t.status)
+          .toLowerCase()
+          .includes(search.toLowerCase())
+      )
+    : data?.transactions;
 
   return (
-    <Box
-      w="250px"
-      borderRight="1px solid"
-      borderColor={border}
-      bg={bg}
-      p={4}
-      display="flex"
-      flexDir="column"
-      gap={6}
-    >
-      <HStack p={{ base: 4 }}>
-        <Image
-          src={images.logoBlueWithBg}
-          alt="Logo"
-          boxSize="28px"
-          rounded={"full"}
-        />
-        <Text fontSize={"xl"}>MINIT MONEY</Text>
-      </HStack>
-
-      <VStack align="stretch">
-        <Text fontSize={"xs"}>Main Menu</Text>
-        <Item icon={FiGrid} label="Dashboard" />
-        <Item icon={FiFileText} label="Statistic" />
-        <Item icon={BiFolderOpen} label="Transaction" active />
-        <Item icon={BsCardChecklist} label="Card" />
-      </VStack>
-      <Spacer />
+    <Box flex="1" display="flex" flexDir="column" minW={0} gap={1}>
+      <ContentHeader search={search} setSearch={setSearch} refetch={refetch} />
       <Divider />
-      <HStack spacing={3}>
-        <Avatar size="sm" name={`${user?.firstName} ${user?.lastName}`} />
-        <Text fontWeight="medium">
-          {user?.firstName} {user?.lastName}
-        </Text>
-      </HStack>
-      <Item
-        icon={FiLogOut}
-        label="Logout"
-        onClick={() => {
-          localStorage.removeItem("token");
-          navigate("/login");
-        }}
-      />
+      {loading && <Text>Loading...</Text>}
+      {error && <Text color="red.500">Error: {error.message}</Text>}
+      {!loading && transactions.length === 0 && <Text>No transactions</Text>}
+      <TransactionsTable transactions={transactions} />
     </Box>
-  );
-};
-
-const Topbar = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  return (
-    <IconButton
-      aria-label="Toggle color mode"
-      onClick={toggleColorMode}
-      variant="ghost"
-      icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-    />
   );
 };
 
@@ -396,41 +287,6 @@ const TransactionCard: FC<TransactionCardProps> = ({ id, isOpen, onClose }) => {
         </DrawerBody>
       </DrawerContent>
     </Drawer>
-  );
-};
-
-const Dashboard = () => {
-  const { data, loading, error, refetch } = useQuery(TRANSACTIONS, {
-    fetchPolicy: "cache-and-network",
-  });
-
-  const [search, setSearch] = useState("");
-
-  const transactions: Transaction[] = search
-    ? (data?.transactions || []).filter((t: Transaction) =>
-        (t.id + t.recipient.name + t.currency + t.status)
-          .toLowerCase()
-          .includes(search.toLowerCase())
-      )
-    : data?.transactions;
-
-  const pageBg = useColorModeValue("gray.50", "gray.900");
-  return (
-    <Flex h="100vh" bg={pageBg}>
-      <Sidebar />
-      <Box flex="1" display="flex" flexDir="column" minW={0} gap={1}>
-        <ContentHeader
-          search={search}
-          setSearch={setSearch}
-          refetch={refetch}
-        />
-        <Divider />
-        {loading && <Text>Loading...</Text>}
-        {error && <Text color="red.500">Error: {error.message}</Text>}
-        {!loading && transactions.length === 0 && <Text>No transactions</Text>}
-        <TransactionsTable transactions={transactions} />
-      </Box>
-    </Flex>
   );
 };
 

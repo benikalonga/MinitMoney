@@ -1,39 +1,14 @@
-import {
-  Button,
-  Container,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Spacer,
-} from "@chakra-ui/react";
-import { Outlet, useNavigate } from "react-router-dom";
-import images from "../constants/images";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
+import { Outlet } from "react-router-dom";
+import Sidebar from "./common/Sidebar";
 
 const AppLayout = () => {
-  const navigate = useNavigate();
+  const pageBg = useColorModeValue("gray.50", "gray.900");
   return (
-    <Container maxW="7xl" py={6}>
-      <Flex mb={6} align="center" gap={4}>
-        <HStack>
-          <Image src={images.logoBlueWithBg} alt="Logo" boxSize="28px" />
-          <Heading as="h1" size="md" color="brand.700">
-            MiniMoney
-          </Heading>
-        </HStack>
-        <Spacer />
-        <Button
-          variant="outline"
-          onClick={() => {
-            localStorage.removeItem("token");
-            navigate("/login");
-          }}
-        >
-          Logout
-        </Button>
-      </Flex>
+    <Flex h="100vh" bg={pageBg}>
+      <Sidebar />
       <Outlet />
-    </Container>
+    </Flex>
   );
 };
 export default AppLayout;
