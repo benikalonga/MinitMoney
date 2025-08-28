@@ -78,12 +78,19 @@ if having dependencies version conflict, please run **npm install --legacy-peer-
 Please see the result in `./results` directory
 Screenshots for the entire system
 
-## MOBILE
+# MOBILE
 
-![Login](results/mobile/1.png?raw=true)
-![Register](results/mobile/2.png?raw=true)
-![Home](results/mobile/3.png?raw=true)
-![Send Money](results/mobile/4.png?raw=true)
-![Send History](results/mobile/5.png?raw=true)
-![Transaction Detail](results/mobile/6.png?raw=true)
-![Network Checking](results/mobile/7.png?raw=true)
+**1**
+![Login](results/mobile/1.png)
+**2**
+![Register](results/mobile/2.png)
+**3**
+![Home](results/mobile/3.png)
+**4**
+![Send Money](results/mobile/4.png)
+**5**
+![Send History](results/mobile/5.png)
+**6**
+![Transaction Detail](results/mobile/6.png)
+**7**
+![Network Checking](results/mobile/7.png)
