@@ -7,11 +7,14 @@ Building both a mobile app and a web dashboard using the designs provided.
 
 https://github.com/user-attachments/assets/80521258-aba6-4202-851e-f03c6f84a0d7
 
-Clone this project 
+Clone this project
+
 ```bash
 git clone https://github.com/benikalonga/MinitMoney.git
 ```
-Get started 
+
+Get started
+
 ### Mobile (Expo)
 
 Expo React Native + TypeScript + Apollo + Axios + SecureStore
@@ -96,6 +99,7 @@ Screenshots for the entire system
 **3** <img src="./results/mobile/3.PNG" width="200">
 **4** <img src="./results/mobile/4.PNG" width="200">
 **5** <img src="./results/mobile/5.PNG" width="200">
+**5** <img src="./results/mobile/5b.PNG" width="200">
 **6** <img src="./results/mobile/6.PNG" width="200">
 **7** <img src="./results/mobile/7.PNG" width="200">
 
