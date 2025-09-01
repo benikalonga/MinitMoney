@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import React, { useCallback, useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, Text, View } from "react-native";
-import { Button, Icon, TouchableRipple } from "react-native-paper";
+import { Button, Icon, TextInput, TouchableRipple } from "react-native-paper";
 import { TRANSACTIONS } from "../apollo/operations";
 import TopBar from "../components/TopBar";
 import { colors } from "../constants/colors";
@@ -16,6 +16,8 @@ const History = ({ navigation, route }: any) => {
   const newTransactionId = route.params?.newId;
   const { data, loading, error, refetch } = useQuery(TRANSACTIONS);
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     if (newTransactionId) {
       refetch();
@@ -26,7 +28,15 @@ const History = ({ navigation, route }: any) => {
     navigation.navigate("TransactionDetail", { id: item.id });
   }, []);
 
-  const transactions: Transaction[] = data?.transactions || [];
+  const transactions: Transaction[] = data?.transactions
+    ? search
+      ? (data?.transactions || []).filter((t: Transaction) =>
+          (t.id + t.recipient.name + t.currency + t.status)
+            .toLowerCase()
+            .includes(search.toLowerCase())
+        )
+      : data?.transactions
+    : [];
   const hasItems = Boolean(transactions.length);
 
   let content: React.ReactNode = null;
@@ -63,49 +73,55 @@ const History = ({ navigation, route }: any) => {
         </Button>
       </View>
     );
-  } else if (data && !hasItems) {
-    content = (
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 12,
-        }}
-      >
-        <Icon source={"format-list-checkbox"} size={60} color="#dadada" />
-        <Text>No transactions yet</Text>
-        <Button
-          mode="contained"
-          onPress={() => {
-            refetch();
-          }}
-          style={{
-            borderRadius: sizes.borderRadius,
-          }}
-        >
-          Refresh
-        </Button>
-      </View>
-    );
+  } else if (data && !hasItems && !search) {
+    content = <EmptyComponent refetch={refetch} />;
   } else
     content = (
-      <FlatList
-        data={transactions}
-        keyExtractor={(i) => i.id}
-        ItemSeparatorComponent={() => (
-          <View style={{ height: 1, backgroundColor: colors.border }} />
-        )}
-        renderItem={({ item, index }) => (
-          <TransactionItem
-            item={item}
-            key={index + "_" + item.id}
-            onPress={openTransactionDetail}
-          />
-        )}
-        onRefresh={refetch}
-        refreshing={loading}
-      />
+      <>
+        <TextInput
+          mode="outlined"
+          label="Search..."
+          outlineStyle={{
+            borderRadius: sizes.borderRadius,
+          }}
+          style={{
+            backgroundColor: colors.white,
+          }}
+          value={search}
+          onChangeText={setSearch}
+          disabled={loading}
+          selectTextOnFocus
+          right={
+            <TextInput.Icon
+              icon={search ? "close" : "magnify"}
+              disabled={loading}
+              onPress={() => {
+                if (search) {
+                  setSearch("");
+                  return false;
+                }
+              }}
+            />
+          }
+        />
+        <FlatList
+          data={transactions}
+          keyExtractor={(i) => i.id}
+          ItemSeparatorComponent={() => (
+            <View style={{ height: 1, backgroundColor: colors.border }} />
+          )}
+          renderItem={({ item, index }) => (
+            <TransactionItem
+              item={item}
+              key={index + "_" + item.id}
+              onPress={openTransactionDetail}
+            />
+          )}
+          ListEmptyComponent={<EmptyComponent refetch={refetch} />}
+          onRefresh={refetch}
+          refreshing={loading}
+        />
+      </>
     );
 
   return (
@@ -190,3 +206,28 @@ const TransactionItem = ({
     </TouchableRipple>
   );
 };
+
+const EmptyComponent = ({ refetch }: { refetch: () => void }) => (
+  <View
+    style={{
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      gap: 12,
+    }}
+  >
+    <Icon source={"format-list-checkbox"} size={60} color="#dadada" />
+    <Text>No transactions yet</Text>
+    <Button
+      mode="contained"
+      onPress={() => {
+        refetch();
+      }}
+      style={{
+        borderRadius: sizes.borderRadius,
+      }}
+    >
+      Refresh
+    </Button>
+  </View>
+);

@@ -36,6 +36,20 @@
       "currency": "ZAR",
       "status": "SUCCESS",
       "createdAt": "2025-08-28T01:22:25.997Z"
+    },
+    {
+      "id": "upyhm-n1QQZEClEPsJ0cS",
+      "userId": "Nj0vphwVrGRmMlhKblNT9",
+      "recipient": {
+        "id": "mmcEqB-kqG5_qdxQhgu_r",
+        "name": "Jonathan Kalonga",
+        "method": "Mpesa"
+      },
+      "amount": 100,
+      "method": "Mpesa",
+      "currency": "ZAR",
+      "status": "SUCCESS",
+      "createdAt": "2025-09-01T07:31:07.322Z"
     }
   ]
 }
